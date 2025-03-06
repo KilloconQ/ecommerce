@@ -1,11 +1,13 @@
-<article class="flex flex-col lg:flex-row items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 bg-black p-8">
-  <div class="text-white">
-    <h2 class="text-3xl font-bold mb-6">
-      Productos populares
-    </h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<article
+  class="grid grid-cols-1 lg:grid-cols-5 items-start lg:items-center space-y-4 lg:space-y-0 lg:space-x-4 bg-black p-8"
+>
+  <div class="text-white col-span-full">
+    <h2 class="text-3xl font-bold mb-6">Productos populares</h2>
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+    >
       @for (product of products; track $index) {
-      <app-product-card [product]="product" />
+        <app-product-card [product]="product" />
       }
     </div>
   </div>

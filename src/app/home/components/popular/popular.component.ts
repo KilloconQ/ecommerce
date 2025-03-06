@@ -3,12 +3,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ProductCardComponent } from '../../../shared/product-card/product-card.component';
 
 @Component({
-  selector: 'app-popular',
-  standalone: true,
-  imports: [ProductCardComponent],
-  templateUrl: './popular.component.html',
-  styleUrl: './popular.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-popular',
+    imports: [ProductCardComponent],
+    templateUrl: './popular.component.html',
+    styleUrl: './popular.component.css',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PopularComponent {
   products: Product[] = [
