@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { ProductCardComponent } from '../../../shared/product-card/product-card.component';
 
@@ -7,7 +7,8 @@ import { ProductCardComponent } from '../../../shared/product-card/product-card.
   standalone: true,
   imports: [ProductCardComponent],
   templateUrl: './popular.component.html',
-  styleUrl: './popular.component.css'
+  styleUrl: './popular.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PopularComponent {
   products: Product[] = [
@@ -16,11 +17,10 @@ export class PopularComponent {
     { price: 100, name: 'Product 3' },
     { price: 100, name: 'Product 4' },
     { price: 100, name: 'Product 5' },
-  ]
-
+  ];
 }
 
 interface Product {
-  price: number,
-  name: string,
+  price: number;
+  name: string;
 }

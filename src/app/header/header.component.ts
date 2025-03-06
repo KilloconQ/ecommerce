@@ -1,15 +1,16 @@
-import { Component } from "@angular/core";
-import { MatIconModule } from "@angular/material/icon";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: "app-header",
+  selector: 'app-header',
   standalone: true,
   imports: [MatIconModule],
-  templateUrl: "./header.component.html",
-  styleUrl: "./header.component.css",
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  componentString = "HeaderComponent";
+  componentString = 'HeaderComponent';
   constructor() {
     console.log(this.componentString);
   }
