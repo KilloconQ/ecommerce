@@ -11,7 +11,4 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   componentString = 'HeaderComponent';
-  constructor() {
-    console.log(this.componentString);
-  }
 }
